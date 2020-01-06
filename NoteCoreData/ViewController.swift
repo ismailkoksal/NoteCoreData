@@ -10,6 +10,19 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textNoteTitle: UITextField!
+    @IBOutlet weak var textNoteDesc: UITextView!
+    
+    @IBAction func actionNoteSave(_ sender: Any) {
+        let newNote = Note(context: context)
+        newNote.title = textNoteTitle.text
+        newNote.desc = textNoteDesc.text
+        newNote.date_creation = NSDate() as Date
+        
+        ad.saveContext()
+        textNoteTitle.text = ""
+        textNoteDesc.text = ""
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.

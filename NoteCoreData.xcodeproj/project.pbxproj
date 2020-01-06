@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		D32531CF23C37CF900DED46A /* ListNotesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D32531CE23C37CF900DED46A /* ListNotesViewController.swift */; };
 		D35BDF9723C3755500B4A6B1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDF9623C3755500B4A6B1 /* AppDelegate.swift */; };
 		D35BDF9923C3755500B4A6B1 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDF9823C3755500B4A6B1 /* SceneDelegate.swift */; };
 		D35BDF9B23C3755500B4A6B1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D35BDF9A23C3755500B4A6B1 /* ViewController.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		D32531CE23C37CF900DED46A /* ListNotesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNotesViewController.swift; sourceTree = "<group>"; };
 		D35BDF9323C3755500B4A6B1 /* NoteCoreData.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NoteCoreData.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D35BDF9623C3755500B4A6B1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D35BDF9823C3755500B4A6B1 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				D35BDFA423C3755600B4A6B1 /* LaunchScreen.storyboard */,
 				D35BDFA723C3755600B4A6B1 /* Info.plist */,
 				D35BDF9F23C3755500B4A6B1 /* NoteCoreData.xcdatamodeld */,
+				D32531CE23C37CF900DED46A /* ListNotesViewController.swift */,
 			);
 			path = NoteCoreData;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D35BDF9B23C3755500B4A6B1 /* ViewController.swift in Sources */,
+				D32531CF23C37CF900DED46A /* ListNotesViewController.swift in Sources */,
 				D35BDF9723C3755500B4A6B1 /* AppDelegate.swift in Sources */,
 				D35BDFA123C3755500B4A6B1 /* NoteCoreData.xcdatamodeld in Sources */,
 				D35BDF9923C3755500B4A6B1 /* SceneDelegate.swift in Sources */,
