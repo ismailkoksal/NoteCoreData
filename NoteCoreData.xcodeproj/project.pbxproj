@@ -15,6 +15,7 @@
 		D35BDFA123C3755500B4A6B1 /* NoteCoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D35BDF9F23C3755500B4A6B1 /* NoteCoreData.xcdatamodeld */; };
 		D35BDFA323C3755600B4A6B1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D35BDFA223C3755600B4A6B1 /* Assets.xcassets */; };
 		D35BDFA623C3755600B4A6B1 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D35BDFA423C3755600B4A6B1 /* LaunchScreen.storyboard */; };
+		D3B0A14F23C46ABA00F3C01B /* TableViewCellNotes.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3B0A14E23C46ABA00F3C01B /* TableViewCellNotes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		D35BDFA223C3755600B4A6B1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D35BDFA523C3755600B4A6B1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D35BDFA723C3755600B4A6B1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D3B0A14E23C46ABA00F3C01B /* TableViewCellNotes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCellNotes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +66,7 @@
 				D35BDF9823C3755500B4A6B1 /* SceneDelegate.swift */,
 				D35BDF9A23C3755500B4A6B1 /* ViewController.swift */,
 				D35BDF9C23C3755500B4A6B1 /* Main.storyboard */,
+				D3B0A14E23C46ABA00F3C01B /* TableViewCellNotes.swift */,
 				D35BDFA223C3755600B4A6B1 /* Assets.xcassets */,
 				D35BDFA423C3755600B4A6B1 /* LaunchScreen.storyboard */,
 				D35BDFA723C3755600B4A6B1 /* Info.plist */,
@@ -147,6 +150,7 @@
 				D35BDF9B23C3755500B4A6B1 /* ViewController.swift in Sources */,
 				D32531CF23C37CF900DED46A /* ListNotesViewController.swift in Sources */,
 				D35BDF9723C3755500B4A6B1 /* AppDelegate.swift in Sources */,
+				D3B0A14F23C46ABA00F3C01B /* TableViewCellNotes.swift in Sources */,
 				D35BDFA123C3755500B4A6B1 /* NoteCoreData.xcdatamodeld in Sources */,
 				D35BDF9923C3755500B4A6B1 /* SceneDelegate.swift in Sources */,
 			);

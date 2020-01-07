@@ -8,12 +8,29 @@
 
 import UIKit
 
-class ListNotesViewController: UIViewController {
+class ListNotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+    
+    var listNotes = [Note]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return listNotes.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: TableViewCellNotes = tableView.dequeueReusableCell(withIdentifier: "cellNote", for: indexPath) as! TableViewCellNotes
+        
+        cell.setNote(note: listNotes[indexPath.row])
+        return cell
     }
 
 }
