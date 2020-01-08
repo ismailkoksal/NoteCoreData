@@ -7,13 +7,18 @@
 //
 
 import UIKit
+import CoreData
 
 class ListNotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
+    @IBOutlet weak var tableViewListNotes: UITableView!
     var listNotes = [Note]()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        loadNotes()
+        tableViewListNotes.delegate = self
+        tableViewListNotes.dataSource = self
 
         // Do any additional setup after loading the view.
     }
@@ -31,6 +36,16 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
         
         cell.setNote(note: listNotes[indexPath.row])
         return cell
+    }
+    
+    func loadNotes() {
+        let fetchRequest: NSFetchRequest<Note> = Note.fetchRequest()
+        do {
+            listNotes = try context.fetch(fetchRequest)
+            tableViewListNotes.reloadData()
+        } catch {
+            print("Empty database notes")
+        }
     }
 
 }

@@ -23,11 +23,11 @@ class ViewController: UIViewController {
         textNoteTitle.text = ""
         textNoteDesc.text = ""
     }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }
-
 
 }
 

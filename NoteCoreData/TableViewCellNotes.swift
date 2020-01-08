@@ -30,7 +30,7 @@ class TableViewCellNotes: UITableViewCell {
         showDesc.text = note.desc
         
         let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "dd/mm/yyyy HH:mm"
+        dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
         showDate.text = dateFormatter.string(from: note.date_creation!)
     }
 }
