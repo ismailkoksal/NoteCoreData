@@ -17,13 +17,24 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        if let note = editNote {
+            textNoteTitle.text = note.title
+            textNoteDesc.text = note.desc
+        }
     }
     
     @IBAction func actionNoteSave(_ sender: Any) {
-        let newNote = Note(context: context)
-        newNote.title = textNoteTitle.text
-        newNote.desc = textNoteDesc.text
-        newNote.date_creation = NSDate() as Date
+        var newNote: Note?
+        
+        if let note = editNote {
+            newNote = note
+        } else {
+            newNote = Note(context: context)
+        }
+        
+        newNote?.title = textNoteTitle.text
+        newNote?.desc = textNoteDesc.text
+        newNote?.date_creation = NSDate() as Date
         
         ad.saveContext()
         textNoteTitle.text = ""
@@ -31,8 +42,7 @@ class ViewController: UIViewController {
     }
     
     @IBAction func buttonActionBackToListNotes(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
+        let listNotesViewController = presentingViewController as? ListNotesViewController
+        dismiss(animated: true, completion: {listNotesViewController?.loadNotes()})
     }
-    
 }
-

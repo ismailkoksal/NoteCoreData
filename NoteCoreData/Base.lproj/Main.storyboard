@@ -24,7 +24,11 @@
                                                 <action selector="buttonActionBackToListNotes:" destination="BYZ-38-t0r" id="zie-sl-oYl"/>
                                             </connections>
                                         </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" title="Mes notes" id="PxA-ke-ipy"/>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="save" id="pmL-af-xeW">
+                                            <connections>
+                                                <action selector="actionNoteSave:" destination="BYZ-38-t0r" id="d0U-nU-zvN"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -39,44 +43,19 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="sSU-xP-zyw"/>
                                 </constraints>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                 <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8Q-fB-Hgw">
-                                <rect key="frame" x="20" y="350" width="374" height="27"/>
-                                <color key="backgroundColor" red="0.2196078431372549" green="0.50196078431372548" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="cNw-r3-07d"/>
-                                    <constraint firstAttribute="height" constant="27" id="rhP-qC-FZK"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
-                                <inset key="contentEdgeInsets" minX="11.699999999999999" minY="0.0" maxX="11.699999999999999" maxY="0.0"/>
-                                <state key="normal" title="SAVE">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
-                                        <integer key="value" value="6"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="actionNoteSave:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Ex2-Z5-21n"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="CiX-8j-AAv" firstAttribute="leading" secondItem="DX0-Le-a0s" secondAttribute="leading" id="4uh-qA-PIj"/>
                             <constraint firstItem="CiX-8j-AAv" firstAttribute="trailing" secondItem="DX0-Le-a0s" secondAttribute="trailing" id="PTK-IT-SzC"/>
-                            <constraint firstItem="u8Q-fB-Hgw" firstAttribute="top" secondItem="CiX-8j-AAv" secondAttribute="bottom" constant="20" id="R1m-mb-04e"/>
                             <constraint firstItem="DX0-Le-a0s" firstAttribute="top" secondItem="4CH-Ps-Anb" secondAttribute="bottom" constant="20" id="Vil-Gh-EhC"/>
                             <constraint firstItem="DX0-Le-a0s" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="XMg-Sp-a9j"/>
-                            <constraint firstItem="u8Q-fB-Hgw" firstAttribute="trailing" secondItem="CiX-8j-AAv" secondAttribute="trailing" id="ZCG-RR-5xi"/>
                             <constraint firstItem="4CH-Ps-Anb" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="ZgV-td-gd5"/>
                             <constraint firstItem="DX0-Le-a0s" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-20" id="ebI-j6-QCe"/>
-                            <constraint firstItem="u8Q-fB-Hgw" firstAttribute="leading" secondItem="CiX-8j-AAv" secondAttribute="leading" id="f2P-3W-nfq"/>
                             <constraint firstItem="4CH-Ps-Anb" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="fHs-43-qtF"/>
                             <constraint firstItem="4CH-Ps-Anb" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="fIl-fK-kJa"/>
                             <constraint firstItem="CiX-8j-AAv" firstAttribute="top" secondItem="DX0-Le-a0s" secondAttribute="bottom" constant="20" id="maK-nB-gzQ"/>
@@ -124,7 +103,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="339"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-fI-zHp">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Titre" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sRa-fI-zHp">
                                                     <rect key="frame" x="20" y="11" width="374" height="20.5"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="20.5" id="ZXW-ov-WaI"/>
@@ -165,13 +144,12 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                 </button>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XcV-R9-f3r">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" editable="NO" text="Description" translatesAutoresizingMaskIntoConstraints="NO" id="XcV-R9-f3r">
                                                     <rect key="frame" x="20" y="39" width="374" height="254"/>
                                                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" id="4bZ-gH-8W1"/>
                                                     </constraints>
-                                                    <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                     <color key="textColor" systemColor="labelColor" cocoaTouchSystemColor="darkTextColor"/>
                                                     <fontDescription key="fontDescription" name=".AppleSystemUIFont" family=".AppleSystemUIFont" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
