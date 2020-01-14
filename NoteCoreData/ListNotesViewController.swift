@@ -12,8 +12,13 @@ import CoreData
 class ListNotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewListNotes: UITableView!
-    var listNotes = [Note]()
 
+    @IBAction func backButton(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    var listNotes = [Note]()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         loadNotes()
@@ -33,8 +38,11 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: TableViewCellNotes = tableView.dequeueReusableCell(withIdentifier: "cellNote", for: indexPath) as! TableViewCellNotes
-        
         cell.setNote(note: listNotes[indexPath.row])
+        
+        cell.deleteButton.tag = indexPath.row
+        cell.deleteButton.addTarget(self, action: #selector(deleteNote(_:)), for: .touchUpInside)
+        
         return cell
     }
     
@@ -46,6 +54,12 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
         } catch {
             print("Empty database notes")
         }
+    }
+    
+    @objc func deleteNote(_ sender: UIButton) {
+        print("Note cell index : \(sender.tag)")
+        context.delete(listNotes[sender.tag])
+        loadNotes()
     }
 
 }

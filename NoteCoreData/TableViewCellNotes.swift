@@ -13,6 +13,7 @@ class TableViewCellNotes: UITableViewCell {
     @IBOutlet weak var showTitle: UILabel!
     @IBOutlet weak var showDesc: UITextView!
     @IBOutlet weak var showDate: UILabel!
+    @IBOutlet weak var deleteButton: UIButton!
     
     override func awakeFromNib() {
         super.awakeFromNib()

@@ -12,11 +12,11 @@
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="NoteCoreData" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4CH-Ps-Anb">
-                                <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                                 <items>
                                     <navigationItem title="Ajouter une note" id="ZX1-jT-G8Q">
                                         <barButtonItem key="rightBarButtonItem" title="Mes notes" id="PxA-ke-ipy">
@@ -28,12 +28,12 @@
                                 </items>
                             </navigationBar>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Title" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DX0-Le-a0s">
-                                <rect key="frame" x="20" y="76" width="374" height="34"/>
+                                <rect key="frame" x="20" y="108" width="374" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="CiX-8j-AAv">
-                                <rect key="frame" x="20" y="130" width="374" height="200"/>
+                                <rect key="frame" x="20" y="162" width="374" height="200"/>
                                 <color key="backgroundColor" systemColor="tertiarySystemFillColor" red="0.46274509800000002" green="0.46274509800000002" blue="0.50196078430000002" alpha="0.12" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="sSU-xP-zyw"/>
@@ -44,7 +44,7 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="u8Q-fB-Hgw">
-                                <rect key="frame" x="20" y="350" width="374" height="27"/>
+                                <rect key="frame" x="20" y="382" width="374" height="27"/>
                                 <color key="backgroundColor" red="0.2196078431372549" green="0.50196078431372548" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="64" id="cNw-r3-07d"/>
@@ -106,7 +106,7 @@
                                     <navigationItem title="Mes notes" id="WP1-L2-2Yu">
                                         <barButtonItem key="leftBarButtonItem" title="Retour" id="rBc-Ox-RKD">
                                             <connections>
-                                                <segue destination="BYZ-38-t0r" kind="show" id="KA6-dM-zZ2"/>
+                                                <action selector="backButton:" destination="uyu-TL-NyY" id="3O6-AX-9QM"/>
                                             </connections>
                                         </barButtonItem>
                                     </navigationItem>
@@ -203,6 +203,7 @@
                                         </tableViewCellContentView>
                                         <accessibility key="accessibilityConfiguration" identifier="cellNote"/>
                                         <connections>
+                                            <outlet property="deleteButton" destination="8R3-O0-Gd9" id="YIv-nf-Z1h"/>
                                             <outlet property="showDate" destination="zXN-hU-s6H" id="ykc-0j-IY2"/>
                                             <outlet property="showDesc" destination="XcV-R9-f3r" id="pQ2-4s-blG"/>
                                             <outlet property="showTitle" destination="sRa-fI-zHp" id="QA1-bJ-9FD"/>
