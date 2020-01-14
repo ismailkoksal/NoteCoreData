@@ -12,6 +12,12 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var textNoteTitle: UITextField!
     @IBOutlet weak var textNoteDesc: UITextView!
+    var editNote: Note?
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+    }
     
     @IBAction func actionNoteSave(_ sender: Any) {
         let newNote = Note(context: context)
@@ -24,10 +30,9 @@ class ViewController: UIViewController {
         textNoteDesc.text = ""
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
+    @IBAction func buttonActionBackToListNotes(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
     }
-
+    
 }
 

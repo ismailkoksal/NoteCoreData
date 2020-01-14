@@ -12,10 +12,6 @@ import CoreData
 class ListNotesViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
     
     @IBOutlet weak var tableViewListNotes: UITableView!
-
-    @IBAction func backButton(_ sender: Any) {
-        dismiss(animated: true, completion: nil)
-    }
     
     var listNotes = [Note]()
     
@@ -43,6 +39,8 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
         cell.deleteButton.tag = indexPath.row
         cell.deleteButton.addTarget(self, action: #selector(deleteNote(_:)), for: .touchUpInside)
         
+        cell.editButton.tag = indexPath.row
+        cell.editButton.addTarget(self, action: #selector(editNote(_:)), for: .touchUpInside)
         return cell
     }
     
@@ -67,5 +65,22 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
         }
         loadNotes()
     }
+    
+    @objc func editNote(_ sender: UIButton) {
+        performSegue(withIdentifier: "editOrAddSegue", sender: listNotes[sender.tag])
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "editOrAddSegue" {
+            if let addOrEdit = segue.destination as? ViewController {
+                if let note = sender as? Note {
+                    addOrEdit.editNote = note
+                }
+            }
+        }
+    }
 
+    @IBAction func buttonAddNoteAction(_ sender: Any) {
+        performSegue(withIdentifier: "editOrAddSegue", sender: nil)
+    }
 }
