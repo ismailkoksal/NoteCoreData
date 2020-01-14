@@ -59,6 +59,12 @@ class ListNotesViewController: UIViewController, UITableViewDelegate, UITableVie
     @objc func deleteNote(_ sender: UIButton) {
         print("Note cell index : \(sender.tag)")
         context.delete(listNotes[sender.tag])
+        do {
+            try context.save()
+            print("Note cell index : \(sender.tag) is deleted")
+        } catch let error as NSError {
+            print("Could not save \(error), \(error.userInfo)")
+        }
         loadNotes()
     }
 
